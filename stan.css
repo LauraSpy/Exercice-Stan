@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin-top: 12%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(9, 70, 121, 1) 49%, rgba(9, 9, 121, 1) 66%, rgba(2, 0, 36, 1) 100%);
+}
+
+.main {
+    display: flex;
+    gap: 10%;
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+}
+
+.img {
+    margin: auto;
+    width: 250px;
+    object-fit: fill;
+    background-image: url(./images/img-map.PNG);
+}
+
+h1 {
+    color: rgb(213, 213, 255);
+    padding-bottom: 5%;
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+}
+
+.list-game {
+    width: 100%;
+}
+
+#list-number {
+    list-style-type: none;
+}
+
+#list-number li {
+    padding-bottom: 5%;
+}
+
+button {
+    background-color: rgba(210, 126, 219, 0.614);
+    border: none;
+    padding: 5%;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color: aliceblue;
+}
+
+button:hover {
+    background-color: rgba(210, 126, 219, 1);
+    transition: all ease-in-out;
+    cursor: pointer;
+}
+
+input {
+    background-color: rgba(109, 77, 252, 0);
+    border: none;
+    color: rgb(245, 39, 46);
+    padding: 2%;
+}
+
+input:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease-in-out all;
+}
