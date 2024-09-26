@@ -6,15 +6,12 @@
     box-sizing: border-box;
 }
 
-body {
+.main {
+    display: flex;
+    margin-top: 3%;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     background-image: radial-gradient(circle, #1d2451, #1d215c, #221c66, #2c136f, #380076);
-}
-
-.main {
-    display: flex;
-    margin-top: 5%;
 }
 
 .menu {
@@ -86,7 +83,7 @@ body {
 select {
     background-color: #04083E;
     color: rgba(238, 223, 240);
-    border: 1px solid rgba(238, 223, 240);
+    border: 1px solid rgba(238, 223, 240, 0.5);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 5px;
@@ -105,6 +102,20 @@ select>option {
     flex-direction: column;
     align-items: center;
     gap: 5%;
+}
+
+.title {
+    margin-bottom: 2%;
+}
+
+.title-img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 42.5%;
+    top: 13.5%;
+    z-index: -1;
+    filter: invert(90%) saturate(60%) opacity(75%);
 }
 
 .img {
@@ -159,6 +170,11 @@ h1 {
     width: 350px;
     font-family: "Dosis", sans-serif;
     text-transform: uppercase;
+}
+
+.special {
+    color: rgb(240, 206, 248);
+    font-size: 50px;
 }
 
 .list-game {
