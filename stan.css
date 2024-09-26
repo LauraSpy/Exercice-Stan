@@ -8,28 +8,72 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     margin-top: 12%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 29%, rgba(9, 70, 121, 1) 49%, rgba(9, 9, 121, 1) 66%, rgba(2, 0, 36, 1) 100%);
+    background-color: #041D42;
 }
 
 .main {
     display: flex;
-    gap: 10%;
 }
 
 #quiz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: 25%;
     margin: auto;
+    background-color: rgb(2, 0, 36);
+    padding: 5%;
+}
+
+.box {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
 }
 
 .img {
     margin: auto;
-    width: 250px;
+    width: 450px;
+    height: 300px;
     object-fit: fill;
-    background-image: url(./images/img-map.PNG);
+    background-image: url(./images/carte.png);
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#showImage {
+    background-color: rgba(210, 126, 219, 0.614);
+    border: none;
+    padding: 5%;
+    width: 150px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+}
+
+#showImage::after {
+    position: absolute;
+    top: 100%;
+    /* Juste en dessous du bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#showImage:hover::after {
+    opacity: 1;
 }
 
 h1 {
@@ -52,7 +96,7 @@ h1 {
     padding-bottom: 5%;
 }
 
-button {
+.submit-btn {
     background-color: rgba(210, 126, 219, 0.614);
     border: none;
     padding: 5%;
@@ -60,23 +104,32 @@ button {
     font-weight: bold;
     font-size: 14px;
     color: aliceblue;
+    transition: ease-in-out 0.5s;
 }
 
-button:hover {
+.submit-btn:hover {
     background-color: rgba(210, 126, 219, 1);
-    transition: all ease-in-out;
+    transition: all ease-in-out 0.5s;
     cursor: pointer;
 }
 
-input {
-    background-color: rgba(109, 77, 252, 0);
+.reset-btn {
+    position: absolute;
+    top: 25%;
+    right: 40%;
+    background-color: transparent;
     border: none;
-    color: rgb(245, 39, 46);
-    padding: 2%;
+    cursor: pointer;
+    padding: 0;
 }
 
-input:hover {
-    cursor: pointer;
-    font-weight: bold;
-    transition: ease-in-out all;
+.reset-image {
+    width: 25px;
+    height: 25px;
+}
+
+.reset-image:hover {
+    transform: scale(1.1);
+    /* effet zoom au survol */
+    transition: transform 0.3s ease-in-out;
 }

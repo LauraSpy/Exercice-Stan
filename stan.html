@@ -9,6 +9,9 @@
 </head>
 
 <body class="main">
+    <button id="refresh" class="reset-btn">
+        <img src="https://i.postimg.cc/13q5X013/restart-alt.png" alt="Reset" class="reset-image">
+    </button>
     <div id="quiz">
         <h1>Retrouve le bon pays sur la carte</h1>
         <div class="list-game">
@@ -17,12 +20,16 @@
             </div>
         </div>
 
-        <button id="submit" type="button">
+        <button id="submit" type="button" class="submit-btn">
             Valider
         </button>
-        <input type="button" value="Reset" id="refresh" />
+
+
+        <div class="box">
+            <button id="showImage">Clique ici</button>
+            <div class="img" id="imageContainer" style="display: none;"></div>
+        </div>
     </div>
-    <div class="img"></div>
 
 
     <script src="./stan.js"></script>
