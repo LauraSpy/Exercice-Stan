@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Silkscreen:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,29 +9,98 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
-    margin-top: 12%;
-    background-color: #041D42;
+    background-image: radial-gradient(circle, #1d2451, #1d215c, #221c66, #2c136f, #380076);
 }
 
 .main {
     display: flex;
+    margin-top: 5%;
+}
+
+.menu {
+    position: absolute;
+    top: 2%;
+    width: 100%;
 }
 
 #quiz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
+    width: 50%;
     margin: auto;
-    border: 2px solid rgba(210, 126, 219, 0.614);
+    border: 3px solid rgba(210, 126, 219, 0.614);
+    border-radius: 45% 55% 66% 34% / 39% 41% 59% 61%;
     padding: 5%;
+    animation: borderColorChange 5s infinite;
 }
 
-.question {}
+@keyframes borderColorChange {
+    0% {
+        border-color: rgba(210, 126, 219, 0.614);
+        /* couleur initiale */
+    }
+
+    25% {
+        border-color: rgba(126, 219, 210, 0.614);
+        /* couleur intermédiaire 1 */
+    }
+
+    50% {
+        border-color: rgba(219, 210, 126, 0.614);
+        /* couleur intermédiaire 2 */
+    }
+
+    75% {
+        border-color: rgba(126, 210, 219, 0.614);
+        /* couleur intermédiaire 3 */
+    }
+
+    100% {
+        border-color: rgba(210, 126, 219, 0.614);
+        /* retour à la couleur initiale */
+    }
+}
+
+#list-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    background-color: rgba(210, 126, 219, 0);
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.question label {
+    color: rgba(238, 223, 240);
+}
+
+select {
+    background-color: #04083E;
+    color: rgba(238, 223, 240);
+    border: 1px solid rgba(238, 223, 240);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 200px;
+}
+
+select>option {
+    background-color: #04083E;
+}
+
 
 .box {
     position: absolute;
-    left: 15%;
+    right: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +119,7 @@ body {
 
 #showImage {
     background-color: rgba(210, 126, 219, 0.614);
+    font-family: "Silkscreen", sans-serif;
     border: none;
     padding: 5%;
     width: 150px;
@@ -60,11 +132,6 @@ body {
 }
 
 #showImage::after {
-    position: absolute;
-    top: 100%;
-    /* Juste en dessous du bouton */
-    left: 50%;
-    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 5px;
@@ -85,9 +152,11 @@ body {
 h1 {
     color: rgb(213, 213, 255);
     padding-bottom: 5%;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
-    width: 200px;
+    width: 350px;
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
 }
 
 .list-game {
@@ -104,13 +173,16 @@ h1 {
 
 .submit-btn {
     background-color: rgba(210, 126, 219, 0.614);
+    font-family: "Silkscreen", sans-serif;
     border: none;
-    padding: 5%;
+    padding: 2%;
+    width: 150px;
     border-radius: 15px;
     font-weight: bold;
     font-size: 14px;
     color: aliceblue;
     transition: ease-in-out 0.5s;
+    text-transform: uppercase;
 }
 
 .submit-btn:hover {
@@ -121,8 +193,7 @@ h1 {
 
 .reset-btn {
     position: absolute;
-    top: 25%;
-    right: 40%;
+    right: 15%;
     background-color: transparent;
     border: none;
     cursor: pointer;
