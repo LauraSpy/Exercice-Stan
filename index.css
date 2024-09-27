@@ -28,6 +28,46 @@
     width: 100%;
 }
 
+.help-btn {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    left: 15%;
+    filter: invert(90%);
+    opacity: 40%;
+}
+
+.help-btn:hover {
+    cursor: pointer;
+    background-color: rgba(210, 126, 219, 0.614);
+    border-radius: 50%;
+    opacity: 100%;
+    filter: none;
+}
+
+.help-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(210, 126, 219, 1);
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.help-btn:hover::after {
+    opacity: 1;
+}
+
+
 #quiz {
     display: flex;
     flex-direction: column;

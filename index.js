@@ -100,3 +100,13 @@ document.getElementById('showImage').addEventListener('click', function () { //j
         imageContainer.style.display = 'none'; //si le bloc est affiché au click, il va revenir à son état par défault et "se cacher"
     }
 });
+
+
+// Sélectionne le bouton avec l'ID 'help'
+const helpButton = document.getElementById('help');
+
+// Ajoute un écouteur d'événement 'click'
+helpButton.addEventListener('click', function () {
+    // Affiche une alerte lorsqu'on clique sur le bouton
+    alert("Ce n'est pas ici ! Clique ailleurs...");
+});
