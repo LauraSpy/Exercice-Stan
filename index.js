@@ -3,13 +3,13 @@ const quizContainer = document.getElementById('list-number');
 
 //création d'une liste d'objets contenant les numéros des questions et les bonnes réponses associées
 const listQuestions = [
-    { number: 1, correctAnswer: 'pays1' },
-    { number: 2, correctAnswer: 'pays2' },
-    { number: 3, correctAnswer: 'pays3' },
-    { number: 4, correctAnswer: 'pays4' },
-    { number: 5, correctAnswer: 'pays5' },
-    { number: 6, correctAnswer: 'pays6' },
-    { number: 7, correctAnswer: 'pays7' }
+    { number: 1, correctAnswer: 'pays2' },
+    { number: 2, correctAnswer: 'pays6' },
+    { number: 3, correctAnswer: 'pays7' },
+    { number: 4, correctAnswer: 'pays1' },
+    { number: 5, correctAnswer: 'pays4' },
+    { number: 6, correctAnswer: 'pays5' },
+    { number: 7, correctAnswer: 'pays3' }
 ];
 
 // Fonction pour construire et afficher le quiz avec des listes déroulantes
