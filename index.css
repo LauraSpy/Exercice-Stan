@@ -1,21 +1,29 @@
+/* importation de fonts personnalisées */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Silkscreen:wght@400;700&display=swap');
 
+/* on initialise les paramètres par défault des navigateurs à 0 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ma classe "main" est le gros bloc HTML dans lequel j'ai placé tous mes éléments */
 .main {
     display: flex;
+    /* j'utilise flex pour gérer la structure des éléments */
     margin-top: 3%;
+    /* je décale ce bloc un peu vers le bas pour laisser une marge */
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     background-image: radial-gradient(circle, #1d2451, #1d215c, #221c66, #2c136f, #380076);
+    /* j'utilise background-image pour créer un effet de "gradient" pour la couleur du fond */
 }
 
+/* je crée un "boite" spécifique pour placé quelques éléments en haut de la page */
 .menu {
     position: absolute;
+    /* la position absolute place les éléments au-dessus des autres */
     top: 2%;
     width: 100%;
 }
@@ -26,12 +34,15 @@
     align-items: center;
     width: 50%;
     margin: auto;
+    /* margin auto place les éléments au milieu */
     border: 3px solid rgba(210, 126, 219, 0.614);
     border-radius: 45% 55% 66% 34% / 39% 41% 59% 61%;
+    /* les % me permettent de créer un effet de bordure dans tous les sens */
     padding: 5%;
     animation: borderColorChange 5s infinite;
 }
 
+/* keyframes est utilisé pour gérer les animations en CSS */
 @keyframes borderColorChange {
     0% {
         border-color: rgba(210, 126, 219, 0.614);
@@ -90,6 +101,7 @@ select {
     width: 200px;
 }
 
+/* je vais chercher spécifique les éléments à l'intérieur de la liste déroulante */
 select>option {
     background-color: #04083E;
 }
@@ -116,6 +128,7 @@ select>option {
     top: 13.5%;
     z-index: -1;
     filter: invert(90%) saturate(60%) opacity(75%);
+    /* le filter ici me permet d'ajouter un filtre sur l'image pour changer son apparence */
 }
 
 .img {
@@ -123,6 +136,7 @@ select>option {
     width: 450px;
     height: 300px;
     object-fit: fill;
+    /* je fais en sorte que l'image remplisse la boîte */
     background-image: url(./images/carte.png);
     border-radius: 15px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -152,6 +166,7 @@ select>option {
     transition: opacity 0.3s ease;
 }
 
+/* ici, c'est lorsque l'image est affiché après le click, on met l'opacité à son max pour qu'elle soit visible */
 #showImage:hover::after {
     opacity: 1;
 }
@@ -201,6 +216,7 @@ h1 {
     color: aliceblue;
     transition: ease-in-out 0.5s;
     text-transform: uppercase;
+    /* je mets les lettres en majuscule */
 }
 
 .submit-btn:hover {
@@ -211,7 +227,7 @@ h1 {
 
 .reset-btn {
     position: absolute;
-    right: 15%;
+    right: 18%;
     background-color: transparent;
     border: none;
     cursor: pointer;
