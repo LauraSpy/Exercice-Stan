@@ -12,12 +12,13 @@
 .main {
     display: flex;
     /* j'utilise flex pour gérer la structure des éléments */
-    margin-top: 3%;
+    margin-top: 5%;
     /* je décale ce bloc un peu vers le bas pour laisser une marge */
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     background-image: radial-gradient(circle, #1d2451, #1d215c, #221c66, #2c136f, #380076);
     /* j'utilise background-image pour créer un effet de "gradient" pour la couleur du fond */
+    overflow-y: hidden;
 }
 
 /* je crée un "boite" spécifique pour placé quelques éléments en haut de la page */
@@ -70,15 +71,15 @@
 
 #quiz {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 50%;
     margin: auto;
     /* margin auto place les éléments au milieu */
     border: 3px solid rgba(210, 126, 219, 0.614);
     border-radius: 45% 55% 66% 34% / 39% 41% 59% 61%;
     /* les % me permettent de créer un effet de bordure dans tous les sens */
-    padding: 5%;
+    padding: 8% 15% 10% 12%;
     animation: borderColorChange 5s infinite;
 }
 
@@ -164,8 +165,8 @@ select>option {
     width: 150px;
     height: 150px;
     position: absolute;
-    left: 42.5%;
-    top: 13.5%;
+    left: 35.5%;
+    top: 35.5%;
     z-index: -1;
     filter: invert(90%) saturate(60%) opacity(75%);
     /* le filter ici me permet d'ajouter un filtre sur l'image pour changer son apparence */
@@ -194,6 +195,7 @@ select>option {
     color: aliceblue;
     cursor: pointer;
     position: relative;
+    margin-top: -15%;
 }
 
 #showImage::after {
@@ -234,6 +236,9 @@ h1 {
 
 .list-game {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #list-number {
